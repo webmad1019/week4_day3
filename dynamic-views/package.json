@@ -1,0 +1,15 @@
+{
+  "name": "dynamic-views-app",
+  "version": "1.0.0",
+  "description": "App de vistas dinámicas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "German",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.6"
+  }
+}

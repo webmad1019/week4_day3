@@ -1,0 +1,16 @@
+h1, h2, h3, body {
+    font-weight: 100;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.navbar {
+    margin-bottom: 60px;
+}
+
+.card img {
+    object-fit: cover;
+    height: 150px;
+}

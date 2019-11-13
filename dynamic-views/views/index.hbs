@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My first view</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css"
+        integrity="sha256-dARYuC3pd0wa/7R4Hkt/sR2zfLHCgbnVAQ2sPwhNe0A=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css"
+        integrity="sha256-D9AvR0EzkNZoWZVSvI3ch+uf/Z5izrIpcbsykVphwPU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>¡Bienvenid@ {{name}}!</h1>
+        <p>Es un placer tenerte en <strong>{{course}}</strong></p>
+        <img src="https://media.giphy.com/media/l0MYEqEzwMWFCg8rm/giphy.gif">
+        <hr>
+        <footer>
+            <h5>Información adicional:</h5>
+
+            <p>Puedes elegir hacer tu Bootcamp en cualquiera de estos campus europeos:</p>
+            <ul>
+                {{#each availableCampus}}
+                <li>{{@index}}: {{this}}</li>
+                {{else}}
+                <li>Madrid</li>
+                {{/each}}
+            </ul>
+
+            <hr>
+
+
+            <p>Vas a adquirir las siguientes competencias:</p>
+            <ul>
+                {{#each competences}}
+                <li><strong>{{@key}}</strong>: {{this}}</li>
+                {{else}}
+                <li>Programar</li>
+                {{/each}}
+            </ul>
+
+            <hr>
+
+
+            {{#if debt}}
+            <p><strong>Aviso de deuda:</strong> {{{debt}}}</p>
+            {{else}}
+            <p>Curso abonado en su totalidad</p>
+            {{/if}}
+
+            <hr>
+
+
+            {{#unless paymentMethod}}
+            <p><strong>Forma de pago desconocida, remítenosla a la mayor brevedad</strong></p>
+            <hr>
+            {{/unless}}
+
+
+            <p>Dirección</p>
+            {{#if address}}
+            <p>
+                {{#with address}}
+                {{street}} {{number}}<br>
+                {{postalcode}}
+                {{/with}}
+            </p>
+            {{else}}
+            <p>Dirección inexistente</p>
+            {{/if}}
+
+
+
+        </footer>
+    </div>
+
+</body>
+
+</html>

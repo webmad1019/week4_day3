@@ -1,0 +1,15 @@
+{
+  "name": "layout-partials-nba-app",
+  "version": "1.0.0",
+  "description": "App de layouts y partials de HBS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.6"
+  }
+}
